@@ -1,0 +1,108 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{   
+    min-height: 100vh;
+    place-content: center;
+    background: #e2f1e7;
+}
+form{
+    display: flex;
+    padding: 2rem ;
+    gap: 1rem;
+    border-radius: 5pt;
+    width: min(100% - 20%, 100vw);
+    margin: 3rem auto;
+    background-color: white;
+    flex-direction: column;
+}
+h1{
+    /* font-size: clamp(1.5rem , 4vw , 5rem); */
+    margin: 1rem 0 ;
+}
+.names{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* border: solid 1pt saddlebrown; */
+}
+.name{
+    display: flex;
+    flex-grow: 1;
+    gap: 1rem;
+    flex-direction: column;
+}
+input{
+    padding: 0.5rem;
+    border-radius: 5pt;
+    border: solid 1pt lightgrey;
+}
+/* input:hover,input:active,input::selection,input:focus,input:focus-visible{
+    border: solid 1px cornflowerblue;
+    outline-offset: 2px;
+    outline: solid 2px cornflowerblue;
+} */
+.email{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 ;
+    flex-direction: column;
+}
+
+.qtype{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.types{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    /* border: solid 1px rebeccapurple; */
+}
+.types > .type{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    flex-grow: 1;
+    border-radius: 8pt;
+    border: solid 1pt lightgrey;
+}
+.message{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.consent{
+    display: flex;
+    margin: 1rem 0;
+    flex-direction: row;
+}
+.ctxt{
+    display: flex;
+    gap: 1rem;
+}
+
+textarea{
+    padding: 1rem;
+    border-radius: 5pt;
+    resize: none;
+}
+button{
+    color: white;
+    outline: none;
+    padding: 1rem;
+    border-radius: 5pt;
+    border: none;
+    background: #0c7c69;
+}
