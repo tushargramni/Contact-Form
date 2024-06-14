@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Contact Form</title>
-    
-</head>
-<body>
+  </head>
+  <body>
     <form action="">
-        <h1>Contact Us</h1>
-        <label for="names" class="names">
-            <label for="firstName" class="name">
-                <span>First Name * </span>
-                <input type="text" name="first" id="fname" required>
-            </label>
-            <label for="lastName" class="name">
-                <span>Last Name *</span>
-                <input type="text" name="last" id="lname" required>
-            </label>
+      <h1>Contact Us</h1>
+      <label for="names" class="names">
+        <label for="firstName" class="name">
+          <span>First Name * </span>
+          <span class="input">
+            <input type="text" name="first" id="fname" required />
+          </span>
         </label>
-
-        <label for="email" class="email">
-            <span>Email-Address *</span>
-            <input type="email" name="email-id" id="e-id" required>
+        <label for="lastName" class="name">
+          <span>Last Name *</span>
+          <span class="input">
+            <input type="text" name="last" id="lname" required />
+          </span>
         </label>
+      </label>
 
-        <label for="Querytype" class="qtype">
-            <span>Query Type * : </span>
-            <label for="types" class="types">
-                <label for="general" class="type">
-                    <input type="radio" name="enquiry" id="g-enquiry" required>
-                    <span>General Enquiry</span>
-                </label>
-                <label for="support" class="type">
-                    <input type="radio" name="enquiry" id="s-request" required>
-                    <span>Support Request</span>
-                </label>
-            </label>
-            
-        </label>
+      <label for="email" class="email">
+        <span>Email-Address *</span>
+        <input type="email" name="email-id" id="e-id" required />
+      </label>
 
-        <label for="feedback" id="Message" class="message">
-            <span>Message *</span>
-            <textarea
-              name="message"
-              id="message"
-              class="mess"
-              rows="10"
-            ></textarea>
+      <label for="Querytype" class="qtype">
+        <span>Query Type * : </span>
+        <label for="types" class="types">
+          <label for="general" class="type">
+            <input type="radio" name="enquiry" id="g-enquiry" required />
+            <span>General Enquiry</span>
           </label>
-    
-          <label for="checkbox" class="consent">
-            <span class="ctxt"><input type="checkbox" name="" id="" required/> <span style="word-break: break-all;">I consent to being contacted by the team </span></span>
+          <label for="support" class="type">
+            <input type="radio" name="enquiry" id="s-request" required />
+            <span>Support Request</span>
           </label>
-    
-          <button type="submit" class="items" >
-            Submit
-          </button>
+        </label>
+      </label>
+
+      <label for="feedback" id="Message" class="message">
+        <span>Message *</span>
+        <textarea name="message" id="message" class="mess" rows="10"></textarea>
+      </label>
+
+      <label for="checkbox" class="consent">
+        <span class="ctxt"
+          ><input type="checkbox" name="" id="" required />
+          <span style="word-break: break-all"
+            >I consent to being contacted by the team
+          </span></span
+        >
+      </label>
+
+      <button type="submit" class="items">Submit</button>
     </form>
-</body>
+  </body>
 </html>
