@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alphabetic Input Check</title>
+    <style>
+      .error {
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Alphabetic Input Field</h1>
+    <label for="alphabetInput">Enter only alphabets:</label>
+    <input type="text" id="alphabetInput" />
+
+    <script>
+      // JavaScript
+      const inputField = document.querySelector("#alphabetInput");
+      //The inputField variable references the input element.
+
+      inputField.addEventListener("keypress", function (event) {
+        // An event listener is added to the input field to listen for keypress events. This event is fired whenever a key is pressed while the input field is focused.
+        // Inside the keypress event listener, the character corresponding to the key press is checked against a regular expression (/^[a-zA-Z]$/) that allows only alphabetic characters.
+
+        const char = String.fromCharCode(event.which);
+
+        const isAlphabetic = /^[a-zA-Z]$/.test(char); // Check if the character is an alphabetic character
+        // If the character is not alphabetic, the event.preventDefault() method is called to prevent the character from being entered into the input field.
+
+        if (!isAlphabetic) {
+          event.preventDefault(); // Prevent the character from being entered
+        }
+      });
+
+      // Optional: Provide feedback for non-alphabetic characters using input event
+      inputField.addEventListener("input", function (event) {
+        // An additional input event listener is used to ensure that non-alphabetic characters are removed if they somehow bypass the keypress check (e.g., through copy-paste actions). This listener replaces any non-alphabetic characters in the input field's value with an empty string.
+        const value = event.target.value;
+        if (/[^a-zA-Z]/.test(value)) {
+          // This approach ensures that the user can only input alphabetic characters, and any attempt to enter non-alphabetic characters, symbols, or numbers will be blocked. The additional input event listener provides extra validation and cleanup for cases where the input might be altered through non-keypress means.
+          event.target.value = value.replace(/[^a-zA-Z]/g, ""); // Remove non-alphabetic characters
+        }
+      });
+    </script>
+  </body>
+</html>

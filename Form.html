@@ -13,13 +13,25 @@
         <label for="firstName" class="name">
           <span>First Name * </span>
           <span class="input">
-            <input type="text" name="first" id="fname" required />
+            <input
+              type="text"
+              name="first"
+              id="fname"
+              required
+              oninput="fname()"
+            />
           </span>
         </label>
         <label for="lastName" class="name">
           <span>Last Name *</span>
           <span class="input">
-            <input type="text" name="last" id="lname" required />
+            <input
+              type="text"
+              name="last"
+              id="lname"
+              required
+              oninput="lname()"
+            />
           </span>
         </label>
       </label>
@@ -51,13 +63,51 @@
       <label for="checkbox" class="consent">
         <span class="ctxt"
           ><input type="checkbox" name="" id="" required />
-          <span style="word-break: break-all"
-            >I consent to being contacted by the team
-          </span></span
-        >
+          <span style="word-break: break-all">
+            I consent to being contacted by the team
+          </span>
+        </span>
       </label>
 
-      <button type="submit" class="items">Submit</button>
+      <button type="submit" class="submit">Submit</button>
     </form>
+    <script>
+
+      const inputField = document.querySelector("#fname");
+      inputField.addEventListener("keypress", function (event) {
+        const char = String.fromCharCode(event.which);
+        const isAlphabetic = /^[a-zA-Z]$/.test(char);
+
+        if (!isAlphabetic) {
+          event.preventDefault(); // Prevent the character from being entered
+        }
+      });
+      inputField.addEventListener("input", function (event) {
+        const value = event.target.value;
+        if (/[^a-zA-Z]/.test(value)) {
+          event.target.value = value.replace(/[^a-zA-Z]/g, "");
+        }
+      });
+      const input_Field = document.querySelector("#lname");
+      input_Field.addEventListener("keypress", function (event) {
+        const char = String.fromCharCode(event.which);
+        const isAlphabetic = /^[a-zA-Z]$/.test(char);
+
+        if (!isAlphabetic) {
+          event.preventDefault(); // Prevent the character from being entered
+        }
+      });
+      input_Field.addEventListener("input", function (event) {
+        const value = event.target.value;
+        if (/[^a-zA-Z]/.test(value)) {
+          event.target.value = value.replace(/[^a-zA-Z]/g, "");
+        }
+      });
+
+      let sub = document.getElementsByClassName("submit").addEventListener("click", ()=>{
+        alert("Form Submitted Successfully");
+      });
+
+    </script>
   </body>
 </html>

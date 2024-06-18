@@ -22,7 +22,7 @@ form{
     flex-direction: column;
 }
 h1{
-    /* font-size: clamp(1.5rem , 4vw , 5rem); */
+    font-size: clamp(1.5rem , 3vw , 2rem);
     margin: 1rem 0 ;
 }
 
@@ -113,6 +113,7 @@ button{
     color: white;
     outline: none;
     padding: 1rem;
+    font-size: clamp(1rem ,2vw, 1.5rem ) ;
     border-radius: 5pt;
     border: none;
     background: #0c7c69;
